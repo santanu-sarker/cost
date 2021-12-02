@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    
+    <script>
+
+function hotelCost(day){
+    var cost = 0;
+    if(day<=10){
+        cost = day*100;
+        }
+        else if(day<=20){
+            var firstPart = 10*100;
+            var remaining = day-10;
+            var secondPart = remaining*80;
+            cost = firstPart + secondPart;
+        }
+        else{
+            var firstPart = 10*100;
+            var secondPart = 10*80;
+            var remaining = day-20;
+            var thirdPart = remaining*50;
+            cost = firstPart + secondPart + thirdPart;
+        }
+        return cost;
+}
+var totalCost = hotelCost(21);
+document.write(totalCost);
+
+"<br>"
+
+function budgetCalculation(phone,laptop,watch){
+    var phonePrice = phone*1;
+    var laptopPrice = laptop*1;
+    var watchPrice = watch*1;
+    var total = phonePrice+laptopPrice+watchPrice;
+    return total;
+}
+var totalBudget = budgetCalculation(10000,50000,5000);
+document.write(totalBudget)
+
+
+
+    </script>
+</body>
+</html>
